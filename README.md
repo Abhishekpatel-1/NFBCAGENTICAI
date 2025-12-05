@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+.
 
-## Project info
+📌 Finedge AI – Agentic Loan Sales & Underwriting System for NBFCs
 
-**URL**: https://lovable.dev/projects/edc4fa4d-ff61-43f1-9ef7-a9d95b84bdac
+A Multi-Agent AI System for Automating Personal Loan Journeys
 
-## How can I edit this code?
+⭐ Overview
 
-There are several ways of editing your application.
+Finedge AI is an Agentic AI–powered loan automation system built for NBFCs.
+It automates the complete loan lifecycle — from customer conversation, KYC verification, OCR extraction, credit assessment, underwriting, to sanction letter generation.
 
-**Use Lovable**
+This prototype is developed for EY Techathon 6.0, demonstrating how agentic systems can replicate human loan officers while improving speed, accuracy, and scalability.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/edc4fa4d-ff61-43f1-9ef7-a9d95b84bdac) and start prompting.
+🎯 Key Features
 
-Changes made via Lovable will be committed automatically to this repo.
+🤖 Human-like AI Chatbot (Negotiation + Information Collection)
 
-**Use your preferred IDE**
+📄 Document Upload (PAN/Aadhaar)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🔍 OCR Extraction (EasyOCR/Tesseract)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+✔ Automated KYC Verification
 
-Follow these steps:
+📊 AI-Based Underwriting (risk score + eligibility + rules)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🧾 Instant Sanction Letter PDF
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🛡 Compliance Logging & Explainability
 
-# Step 3: Install the necessary dependencies.
-npm i
+📈 Dashboard View for Loan Status
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🧠 Multi-Agent Architecture
 
-**Edit a file directly in GitHub**
+DhanMitra AI uses a structured agentic workflow:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Master Agent
 
-**Use GitHub Codespaces**
+Coordinates the entire journey.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Worker Agents
 
-## What technologies are used for this project?
+Negotiation Agent – understands user intent & collects loan details
 
-This project is built with:
+KYC Agent – verifies identity and extracts text from images
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Underwriting Agent – evaluates eligibility & creditworthiness
 
-## How can I deploy this project?
+Sanction Agent – generates approval/rejection and PDFs
 
-Simply open [Lovable](https://lovable.dev/projects/edc4fa4d-ff61-43f1-9ef7-a9d95b84bdac) and click on Share -> Publish.
+Compliance Agent – maintains logs for auditing
 
-## Can I connect a custom domain to my Lovable project?
+🖥️ Tech Stack
+Frontend (React)
 
-Yes, you can!
+Chat UI
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+File upload (PAN/Aadhaar)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+OCR preview
+
+Loan status dashboard
+
+Backend (FastAPI)
+
+/message → chatbot communication
+
+/upload-kyc → document OCR
+
+/credit-score → mock bureau API
+
+/underwrite → eligibility computation
+
+/generate-sanction → PDF creation
+
+AI / Tools
+
+GPT-based LLM
+
+LangChain agents
+
+EasyOCR / Tesseract
+
+FPDF for sanction PDFs
+
+Storage
+
+Local / AWS S3 for KYC documents
+
+PostgreSQL / MongoDB for records
